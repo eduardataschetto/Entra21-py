@@ -1,8 +1,6 @@
 # Exercicio 8
 # 
 # Converta as seguintes variáveis e imprima na tela o valor e o tipo da variável
-
-
 # 8.1 Para string (exemplo)
 numero = 10  # variável para conversão
 

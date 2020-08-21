@@ -3,19 +3,24 @@
 # 
 # Mostre o nome a quantidade, preço por unidade e o total de cada produto.
 class Produtos:
-    def __init__ (self, nome, qtde, valor):
+    def __init__ (self, nome, quantidade, valor):
         self.nome = nome
-        self.qtde = qtde
+        self.quantidade = quantidade
         self.valor = valor
 
 p = []
-num = int(input("informe a quantidade de produtos diferentes desejada: "))
-i = int(0)
-for i in range(i, num):
-    nome = input("Informe o nome do produto:")
-    qtde =  input("Informe a quantidade comprada do produto: ")
-    valor = input("Informe o valor do produto: ")
-    p.append(Produtos (nome, qtde, valor))
+num = int(input("informe a quantidade de produtos diferentes que você deseja informar: "))
+for i in range(0, num):
+    nome_produto = input("Informe o nome do produto: ")
+    quantidade_produto =  input("Informe a quantidade comprada do produto: ")
+    valor_produto= input("Informe o valor do produto: ")
+    print('\n')
+    p.append(Produtos (nome_produto, quantidade_produto, valor_produto))
 
 for i in p:
-    print("Produto 1: "+i.nome+ " Quantidade: "+i.qtde+ " Preço unitário: R$ " +i.valor+ " Preço total: R$ " +str(int(i.qtde)*float(i.valor)))
+    print(f'''
+    Nome: {i.nome}
+    Quantidade: {i.quantidade}
+    Valor Unitário: {i.valor}
+    Valor Total: {int(i.quantidade)*float(i.valor)}
+    ''')
