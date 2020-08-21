@@ -6,4 +6,4 @@
 
 nome = input("Informe seu nome: ")
 
-print("Olá, "+nome+"!! Seja bem-vindo ao curso de Python do Entra21!")
+print(f'Olá, {nome}!! Seja bem-vindo ao curso de Python do Entra21!')

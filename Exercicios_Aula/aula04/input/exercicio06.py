@@ -6,6 +6,6 @@
 nome = input("Informe seu nome: ")
 idade = input("Informe sua idade: ")
 
-print ("Olá, "+nome+"! Você tem "+idade+" anos. Seja bem-vindo!")
+print (f'Olá, {nome}! Você tem {idade} anos. Seja bem-vindo!')
 
 

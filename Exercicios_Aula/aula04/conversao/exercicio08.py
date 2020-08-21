@@ -1,5 +1,3 @@
-
-
 # Exercicio 8
 # 
 # Converta as seguintes variáveis e imprima na tela o valor e o tipo da variável

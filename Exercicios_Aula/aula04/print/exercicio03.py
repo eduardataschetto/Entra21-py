@@ -6,9 +6,11 @@
 # 
 # Imprima na tela a soma dos 3 números
 
-
-a = int(3)
-b = float(4.5)
-c = int(10)
-soma = a+b+c
-print(soma)
+while True:
+    try:
+        a = int(input("Informe um número: "))
+        b = int(input("Informe outro número: "))
+        c = int(input("Informe um útimo número: "))
+        print(a+b+c)
+    except ValueError:
+        print("Por favor, informe apenas números INTEIROS.")

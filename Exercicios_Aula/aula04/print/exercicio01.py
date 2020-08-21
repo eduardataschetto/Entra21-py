@@ -5,6 +5,8 @@
 
 nome = "Eduarda Silveira de Borges Taschetto"
 idade = "17"
-print("Nome: "+nome+"\nIdade: "+idade)
+print(f'''Nome: {nome}
+Idade: {idade}''')
+
 
 

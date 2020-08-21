@@ -10,4 +10,4 @@ Instrumentos musicais:
 """)
 
 num = input("Informe o número do instrumento escolhido: ")
-print("O instrumento musical selecionado foi o de número "+num )
+print(f'O instrumento musical selecionado foi o de número {num}')
