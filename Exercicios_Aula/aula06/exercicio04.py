@@ -12,16 +12,20 @@ Triângulo Isósceles: quaisquer dois lados iguais;
 Triângulo Escaleno: três lados diferentes;
 """
 
-a = float(input("Informe o lado A do triângulo: "))
-b = float(input("Informe o lado B do triângulo: "))
-c = float(input("Informe o lado C do triângulo: "))
-
-if a +b > c:
-    if a ==b and a == c:
-        print ('Triângulo Equilatero')
-    elif a == b or b == c or a == c:
-        print ('Triângulo Isósceles')
-    elif a !=b and c or b != a and c or a != c:
-        print ('Triângulo Escaleno')
-else:
-    print ('Os valores informados não formam um triãngulo!')
+while True:
+    try:
+        a = float(input("Informe o lado A do triângulo: "))
+        b = float(input("Informe o lado B do triângulo: "))
+        c = float(input("Informe o lado C do triângulo: "))
+    except ValueError:
+        print('Oops! Valor inválido. Tente novamente. ')
+    else:
+        if a +b > c:
+            if a == b and a == c:
+                print ('Triângulo Equilatero')
+            elif a == b or b == c or a == c:
+                print ('Triângulo Isósceles')
+            elif a !=b and c or b != a and c or a != c:
+                print ('Triângulo Escaleno')
+        else:
+            print ('Os valores informados não formam um triãngulo!')

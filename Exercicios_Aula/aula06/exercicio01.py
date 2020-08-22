@@ -67,7 +67,7 @@ def alterar_cad(lista_vendedores):
     exibir_dados(lista_vendedores, vendedor)
 
 def main():
-    print('PROGRAMA PARA CALCULAR A COMISSÃO DE VENDEDORES')
+    print('PROGRAMA GERENCIAMENTOS DE VENDAS E VENDEDORES')
     lista_vendedores = []
     while True:
         try:
@@ -77,8 +77,8 @@ def main():
             3 - Alterar cadastro
             DIGITE 0 PARA SAIR
 
-            Informe a operação desejada: 
-            '''))
+            Informe a operação desejada: '''))
+            print('\n')
             if op == 1:
                 cadastrar_vendedor(lista_vendedores)
             elif op == 2: 
