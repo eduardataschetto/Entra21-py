@@ -25,7 +25,7 @@ while True:
                 print ('Triângulo Equilatero')
             elif a == b or b == c or a == c:
                 print ('Triângulo Isósceles')
-            elif a !=b and c or b != a and c or a != c:
+            elif a !=b and c !=a and c!=b:
                 print ('Triângulo Escaleno')
         else:
-            print ('Os valores informados não formam um triãngulo!')
+            print ('Os valores informados não formam um triângulo!')
