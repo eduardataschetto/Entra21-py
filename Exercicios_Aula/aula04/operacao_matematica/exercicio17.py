@@ -10,9 +10,11 @@
 # 
 # Crie um programa que peça ao usuário o raio e calcule a área da circunferência
 # 
-
-r = float(input("Informe o raio da circunferência: "))
-
-area = 2.14 * (r ** 2)
-
-print("A área da circuferência é "+str(area)+ 2"m².")
+print('Esse é um programa que calcula o raio de uma circunferência.')
+while True:
+    try:
+        raio = float(input("Informe o raio da circunferência: "))
+        print(f'A área da circuferência é {3.14 * (raio ** 2)}m².')
+        break
+    except ValueError:
+        print('Você informou um valor inválido. Tente novamente. ')

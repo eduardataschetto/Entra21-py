@@ -6,6 +6,10 @@
 # 
 # mostre o resultado
 
-x = int(input("Informe o valor de x: "))
-
-print("O resultado da equação 2x+3 é: "+str(2*x+3))
+while True:
+    try:
+        x = int(input('Informe um número inteiro para calcular o resultado da equação  2x+3:  '))
+        print(f'O resultado da equação 2 x {x} + 3 é {2*x+3}.')
+        break
+    except ValueError:
+        print('Por favor, digite apenas números INTEIROS. Tente novamente: ')

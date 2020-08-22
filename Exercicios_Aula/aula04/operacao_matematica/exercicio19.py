@@ -19,12 +19,14 @@
 # Crie um programa que calcule o emprestimo de R$250.00 a uma taxa de 5.5 porcento ao mês. 
 # O programa deve pedir ao usuário que digite quantos mêses deve durar o empréstimo e mostre na tela o valor a ser recebido.
 
-dinheiro_emprestado = float(250.00)
-taxa_juros = float(5.5)
-
-print("Você pegou emprestado R$ "+str(dinheiro_emprestado)+ " á uma taxa de "+str(taxa_juros)+"% ao mês.")
-tempo_emprestimo = int(input("Informe quantos meses durará o empréstimo: "))
-
-valor_receber = dinheiro_emprestado*(1+(taxa_juros/100))**tempo_emprestimo
-
-print("O valor a ser recebido é R$ "+str(valor_receber))
+while True:
+    try:
+        tempo_emprestimo = int(input('Informe quantos meses durará o empréstimo: '))
+    except ValueError:
+        print('Você informou um valor inválido. Tente novamente.')
+    else:
+        print(f'Você emprestou R$ 250,00 á uma taxa de 4,5% a.m. Por um tempo de {tempo_emprestimo} mês (es).')
+        print(f'O valor a ser recebido é R$ {250*(1+(5.5/100))** tempo_emprestimo}')
+        x = input('Digite 0 para sair: ')
+        if x == '0':
+            break

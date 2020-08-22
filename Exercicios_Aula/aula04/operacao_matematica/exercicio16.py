@@ -7,8 +7,12 @@
 # 
 # Faça um programa para o seu superior que peça a temperatura e mostre a venda prevista de bermudas.
 
-t = float(input("Informe a temperatura: "))
-
-vp = 1.5*t + t +150
-
-print("A previsão de venda é: "+str(vp))
+while True:
+    try:
+        temperatura = float(input(f'Informe a temperatura(°C): '))
+        print(f'''
+        A previsão de venda de bermudas é {1.5*temperatura + temperatura + 150}.
+        ''')
+        break
+    except ValueError:
+        print('Você informou um valor inválido. Tente novamente.35')

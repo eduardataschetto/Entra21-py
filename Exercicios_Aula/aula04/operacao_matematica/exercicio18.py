@@ -6,11 +6,12 @@
 # delta = b²-4ac
 # 
 # após calcular, mostre o resultado na tela.
-
-a = int(input("Informe a: "))
-b = int(input("Informe b: "))
-c = int(input("Informe c: "))
-
-delta = (b ** 2) - (4 * a * c)
-
-print("delta = "+str(delta))
+while True:
+    try:
+        a = int(input("Informe a: "))
+        b = int(input("Informe b: "))
+        c = int(input("Informe c: "))
+        print(f'DELTA = {(b ** 2) - (4 * a * c)}')
+        break
+    except ValueError:
+        print('Você informou um valor inválido. Tente novamente.')

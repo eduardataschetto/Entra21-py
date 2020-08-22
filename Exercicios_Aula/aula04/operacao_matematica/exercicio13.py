@@ -5,6 +5,10 @@
 # 
 # mostre o resultado
 
-x = int(input("Informe o valor de x: "))
-
-print("O resultado da equação x+3 é: "+str(x+3))
+while True:
+    try:
+        x = int(input('Informe um número inteiro para a soma: '))
+        print(f'O resultado da soma {x} + 3 é {x+3}.')
+        break
+    except ValueError:
+        print('Por favor, digite apenas números INTEIROS. Tente novamente: ')
