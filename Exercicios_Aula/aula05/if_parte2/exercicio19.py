@@ -19,19 +19,26 @@
 # delta negativo a=1, b=1, c=1
 # delta zero a=1, b=2, c=1
 # delta positivo a=1, b=4, c=1
+print('PROGRAMA PARA CALCULAR BHÁSKARA')
 
-a = float(input("Informe o valor de a: "))
-b = float(input("Informe o valor de b: "))
-c = float(input("Informe o valor de c: "))
-
-delta = (b**2)-(4*a*c)
-
-if delta < 0:
-    print("Delta negativo! Equação não pode ser resolvida!")
-elif delta == 0:
-    x=-b/(2*a)
-    print("S = {"+str(x)+"}")
-else:
-    x =(-b+(delta**(1/2)))/(2*a)
-    x2=(-b-(delta**(1/2)))/(2*a)
-    print("S = {"+str(x)+", "+str(x2)+"}")
+while True:
+    try:
+        a = float(input('Informe o valor de a: '))
+        b = float(input('Informe o valor de b: '))
+        c = float(input('Informe o valor de c: '))
+        delta = (b**2)-(4*a*c)
+        if delta < 0:
+            print('Delta negativo! Equação não pode ser resolvida!')
+        elif delta == 0:
+            x = -b/(2*a)
+            print('S = { ' +str(x)+' }')
+        else:
+            x = (-b+(delta**(1/2)))/(2*a)
+            x1 = (-b-(delta**(1/2)))/(2*a)
+            print('S = { ' +str(x)+', '+str(x1)+  '}')
+    except ValueError:
+        print('Oops! Valor inválido. Tente novamente.')
+    else: 
+        x = input('Digite 1 para continuar: ')
+        if not(x) or not(x == '1'):
+            break

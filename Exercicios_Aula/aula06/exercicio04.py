@@ -17,9 +17,6 @@ while True:
         a = float(input("Informe o lado A do triângulo: "))
         b = float(input("Informe o lado B do triângulo: "))
         c = float(input("Informe o lado C do triângulo: "))
-    except ValueError:
-        print('Oops! Valor inválido. Tente novamente. ')
-    else:
         if a +b > c:
             if a == b and a == c:
                 print ('Triângulo Equilatero')
@@ -29,3 +26,9 @@ while True:
                 print ('Triângulo Escaleno')
         else:
             print ('Os valores informados não formam um triângulo!')
+    except ValueError:
+        print('Oops! Valor inválido. Tente novamente. ')
+    else:
+        x = input('Digite 1 para continuar. ')
+        if not(x == '1') or not(x):
+            break

@@ -36,18 +36,21 @@ while True:
             c =  float(input("Informe um número: "))
             d =  float(input("Informe um número: "))
             print(str((a+b+c+d)/4))
-        if op == 'c' or op == 'D':
-            a =  float(input("Informe um número: "))
-            b =  float(input("Informe um número: "))
-            if b == 0:
-                print("Erro! Não pode dividir por ZERO!")
-            else:
+        if op == 'c' or op == 'C':
+            try:
+                a =  float(input("Informe um número: "))
+                b =  float(input("Informe um número: "))
                 print(+str(a/b))
+            except ZeroDivisionError:
+                print("Erro! Não pode dividir por ZERO!")
         if op == 'd' or op == 'D':
             print("Muito Obrigado e volte sempre!")
     except ValueError:
         print('Oops! Valor inválido. Tente novamente.')
     else:
-        x = int(input('Informe 0 para sair. '))
-        if x == 0:
+        x = input('Informe 1 para continuar . ')
+        try:
+            if not(x == '1'):
+                break
+        except ValueError as e:
             break

@@ -7,28 +7,32 @@
 # 
 # Peça para o usuário escolher uma destas opções e mostre o resultado da operação escolhida.
 
-a = float(input("Informe um número: "))
-b = float(input("Informe um número: "))
+while True:
+    try:
+        a = float(input('Informe um número: '))
+        b = float(input('Informe um número: '))
 
-op = input("""
-#######################
-OPERAÇÕES
-1 - ADIÇÃO
-2 - SUBTRAÇÃO
-3 - DIVISÃO
-4 - EXPOENENCIAÇÃO
-########################
-Informe a opção desejada:
-""")
-
-if op == '1':
-    print(str(a+b))
-elif op == '2':
-    print(str(a-b))
-elif op == '3':
-    print(str(a/b))
-elif op == '4':
-    print(str(a**b))
-else:
-    print("Opção Inválida")
+        op = input('''
+        #######################
+        OPERAÇÕES
+        1 - ADIÇÃO
+        2 - SUBTRAÇÃO
+        3 - DIVISÃO
+        4 - EXPOENENCIAÇÃO
+        ########################
+        Informe a opção desejada: ''')
+        if op == '1':
+            print(f'{a} + {b} = {a+b}')
+        elif op == '2':
+            print(f'{a} - {b} = {a-b}')
+        elif op == '3':
+            print(f'{a} / {b} = {a/b}')
+        elif op == '4':
+            print(f'{a} ^ {b} = {a**b}')
+        x = input('Informe 1 para continuar: ')
+        if not(x) or not(x == 1):
+            break
+    except:
+        print('Oops! Valor inválido. Tente novamente: ')
+        
 

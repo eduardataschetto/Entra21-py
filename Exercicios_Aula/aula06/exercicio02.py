@@ -9,7 +9,6 @@
 # de 6.5 a 9 - Aprovado
 # Acima de 9 - Aprovado com louvor
 
-print('SISTEMA DE GERENCIAMENTO DE NOTAS')
 while True:
     try:
         nota1 = float(input('Informe a nota 1: '))
@@ -28,6 +27,9 @@ while True:
             print('Aprovado')
         else:
             print('Aprovado com louvor.')
-            x = int(input('Digite 0 para sair'))
-            if x == 0:
+            x = int(input('Digite 1 para continuar: '))
+            try:
+                if x != 1:
+                    break
+            except ValueError as e:
                 break

@@ -1,10 +1,14 @@
 # Exercicio 6
 # Escreva um programa que peça 2 números e mostre eles em ordem crescente
 
-a = int(input("Insira um número: "))
-b = int(input("Insira outro número: "))
-
-if  a>b:
-    print(str(b)+" "+str(a))
-elif b>a:
-    print(str(a)+" "+str(b))
+while True:
+    try:
+        a = float(input('Insira um número: '))
+        b = float(input('Insira outro número: '))
+        if  a>b:
+            print(f'{b}, {a}')
+        elif b>a:
+            print(f'{a}, {b}')
+        break
+    except ValueError:
+        print('Oops! Valor inválido. Tente novamente: ')

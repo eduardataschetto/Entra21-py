@@ -12,29 +12,43 @@
 # Mostre o combustivel que ele selecionou, o total abastecido e a porcentagem de desconto a ser aplicada.
 # 
 # Não precisa calcular o valor do combustivel!
-# 
 
-litros = float(input("Informe quantos litros você deseja abastecer: "))
+def print_comb (tipo_combustivel, litros, desconto):
+    print(f'''
+                COMBUSTÍVEL: {tipo_combustivel}
+                TOTAL ABASTECIDO: {litros_combustivel}l
+                DESCONTO:{desconto}%
+                ''')
 
-tipo_comb = input("""
-Informe qual combustível você deseja:
-1 - Álcool
-2 - Diesel
-3 - Gasolina
-""")
+while True:
+    try:
+        litros_combustivel = float(input('Informe quantos litros de combustível você deseja abastecer: '))
+        tipo_combustivel = int(input('''
+        1 - Álcool
+        2 - Diesel
+        3 - Gasolina
 
-if tipo_comb == '3':
-    if litros <= 20:
-        print("Combustível: GASOLINA \nTotal Abastecido: "+str(litros)+"\nDesconto: 0%")
+        Informe com qual combustível você deseja abastecer: '''))
+        if tipo_combustivel == 3:
+            if litros_combustivel <= 20:
+                print_comb('Gasolina', litros_combustivel, '0')
+            else:
+                print_comb('Gasolina', litros_combustivel, '10')
+        elif tipo_combustivel == 2:
+            if litros_combustivel <= 10:
+                print_comb('Diesel', litros_combustivel, '1.5')
+            else:
+                print_comb('Diesel', litros_combustivel, '5')
+        elif tipo_combustivel == 1:
+            if litros_combustivel <= 10:
+                print_comb('Álcool', litros_combustivel, '5')
+            else:
+               print_comb('Álcool', litros_combustivel, '10')
+        else:
+                print("Opção Inválida.")
+    except:
+        print('Oops! Valor inválido. Tente novamente:')
     else:
-        print("Combustível: GASOLINA \nTotal Abastecido: "+str(litros)+"\nDesconto: 10%")
-elif tipo_comb == '2':
-    if litros <= 10:
-        print("Combustível:  DIESEL \nTotal Abastecido: "+str(litros)+"\nDesconto: 1.5%")
-    else:
-        print("Combustível: DIESEL \nTotal Abastecido: "+str(litros)+"\nDesconto: 5%")
-elif tipo_comb == '1':
-    if litros <= 10:
-        print("Combustível:  ÁLCOOL \nTotal Abastecido: "+str(litros)+"\nDesconto: 5%")
-else:
-        print("Opção Inválida")
+        x = input('Digite 1 para continuar.')
+        if not(x) or not(x == '1'):
+            break
