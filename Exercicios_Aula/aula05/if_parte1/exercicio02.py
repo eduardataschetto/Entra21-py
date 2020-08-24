@@ -15,8 +15,5 @@ while True:
         print('Por favor, informe apenas NÚMEROS. Tente Novamente')
     else:
         x = input('Digite 1 para continuar: ')
-        try:
-            if not(x == 1):
-                break
-        except ValueError as e:
+        if not(x == '1') or not(x):
             break

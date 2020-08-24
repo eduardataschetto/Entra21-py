@@ -20,6 +20,6 @@ while True:
                 c = aux
             print(f'{a}, {b}, {c}')
             break
-    except:
+    except ValueError:
         print('Oops! Valor inválido. Tente novamente: ')
 

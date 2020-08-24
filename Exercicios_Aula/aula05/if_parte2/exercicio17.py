@@ -6,11 +6,11 @@
 # Pra média menor que 7 apareça a mensagem "Reprovado"
 while True:
     try:
-        a = float(input('Informe a nota 1: '))
-        b = float(input('Informe a nota 2: '))
-        c = float(input('Informe a nota 3: '))
-        d = float(input('Informe a nota 4: '))
-        media = float((a+b+c+d)/4)
+        nota1 = float(input('Informe a nota 1: '))
+        nota2 = float(input('Informe a nota 2: '))
+        nota3 = float(input('Informe a nota 3: '))
+        nota4 = float(input('Informe a nota 4: '))
+        media = float((nota1+nota2+nota3+nota4)/4)
         if media == 10:
             print('Aprovado com louvor')
         elif media >= 7:

@@ -49,8 +49,6 @@ while True:
         print('Oops! Valor inválido. Tente novamente.')
     else:
         x = input('Informe 1 para continuar . ')
-        try:
-            if not(x == '1'):
-                break
-        except ValueError as e:
+        if not(x == '1') or not(x):
             break
+        

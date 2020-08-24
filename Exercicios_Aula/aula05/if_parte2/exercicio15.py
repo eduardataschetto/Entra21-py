@@ -32,7 +32,7 @@ while True:
         else:
             print('Opção inválida meu caro amigo.')
             print('Mas não fique triste e tente novamente: ')
-    except:
+    except ValueError:
         print('Por favor! Informe um valor válido: ')
     else:
         x = input('Digite 1 para continuar: ')

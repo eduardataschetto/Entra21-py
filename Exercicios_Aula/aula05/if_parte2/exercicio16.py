@@ -46,7 +46,7 @@ while True:
                print_comb('Álcool', litros_combustivel, '10')
         else:
                 print("Opção Inválida.")
-    except:
+    except ValueError:
         print('Oops! Valor inválido. Tente novamente:')
     else:
         x = input('Digite 1 para continuar.')

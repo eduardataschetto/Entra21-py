@@ -27,9 +27,6 @@ while True:
             print('Aprovado')
         else:
             print('Aprovado com louvor.')
-            x = int(input('Digite 1 para continuar: '))
-            try:
-                if x != 1:
-                    break
-            except ValueError as e:
+            x = input('Digite 1 para continuar: ')
+            if not(x == '1') or not(x):
                 break

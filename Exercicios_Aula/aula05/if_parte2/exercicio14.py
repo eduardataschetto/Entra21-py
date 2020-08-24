@@ -24,5 +24,5 @@ while True:
         else:
             print('Opção Inválida meu caro amigo. ')
             print('Mas não fique triste e tente novamente: ')
-    except:
+    except ValueError:
         print('Valor inválido!')

@@ -17,7 +17,7 @@ while True:
         a = float(input("Informe o lado A do triângulo: "))
         b = float(input("Informe o lado B do triângulo: "))
         c = float(input("Informe o lado C do triângulo: "))
-        if a +b > c:
+        if a +b > c :
             if a == b and a == c:
                 print ('Triângulo Equilatero')
             elif a == b or b == c or a == c:

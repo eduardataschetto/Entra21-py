@@ -32,7 +32,7 @@ while True:
         x = input('Informe 1 para continuar: ')
         if not(x) or not(x == 1):
             break
-    except:
+    except ValueError:
         print('Oops! Valor inválido. Tente novamente: ')
         
 
