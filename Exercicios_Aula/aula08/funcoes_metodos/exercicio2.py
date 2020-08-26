@@ -21,6 +21,5 @@ while True:
     O resultado da soma entre os números da lista é: {sum(list)}
     ''')
     x = input('Para continuar digite 1: ')
-    if not(x == '1') or not(x):
+    if not( x == '1' ) or not(x):
         break
-

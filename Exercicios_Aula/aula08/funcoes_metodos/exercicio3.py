@@ -24,33 +24,27 @@ vendas_eduardo = [10.00, 1050.00, 859.75, 199.05, 500.50,750.00, 568.60, 950.00 
 vendas_paulo = [950.00, 89.90, 2500.00, 1750.00,500.00]
 
 vendas = [vendas_armando, vendas_eduardo, vendas_paulo]
-total_vendas = []
-media_vendas = []
 comissao_funcionarios = []
 nome_vendedores = ['ARMANDO', 'EDUARDO','PAULO']
 
 for i in vendas:
-    total_vendas.append(sum(i))
-    media_vendas.append(sum(i)/len(i))
-
-for i in total_vendas:
-    if i <= 1000:
+    if sum(i) <= 1000:
         comissao = 1
-    elif i <= 2500:
+    elif sum(i) <= 2500:
         comissao = 1.5
-    elif i <= 5000:
+    elif sum(i) <= 5000:
         comissao = 2
     else:
         comissao = 3
-    comissao_total = i * (comissao / 100)
-    comissao_funcionarios.append(comissao_total)
+    comissao = sum(i) * (comissao / 100)
+    comissao_funcionarios.append(comissao)
 
 x = 0
 for i in nome_vendedores:
     print(f'''
     {i}
-    Média de vendas: R$ {media_vendas[x]}
-    Venda total: R$ {total_vendas[x]}
+    Média de vendas: R$ {sum(vendas[x]) / len(vendas[x])}
+    Venda total: R$ {sum(vendas[x])}
     Quantidade de vendas: {len(vendas[x])}
     Comissão total: R$ {comissao_funcionarios[x]}
     ''')
