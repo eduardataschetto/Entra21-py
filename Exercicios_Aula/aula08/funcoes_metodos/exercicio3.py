@@ -27,6 +27,7 @@ vendas = [vendas_armando, vendas_eduardo, vendas_paulo]
 comissao_funcionarios = []
 nome_vendedores = ['ARMANDO', 'EDUARDO','PAULO']
 
+x = 0
 for i in vendas:
     if sum(i) <= 1000:
         comissao = 1
@@ -37,6 +38,7 @@ for i in vendas:
     else:
         comissao = 3
     comissao = sum(i) * (comissao / 100)
+    
     comissao_funcionarios.append(comissao)
 
 x = 0
