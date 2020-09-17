@@ -24,6 +24,7 @@ while True:
         sexo.append(input('Informe a sexo: '))
         idades.append(input('Informe a idade: '))
         id.append(i+1)
+
 #3.2
      for i in range(5):
         print(f'''
@@ -32,6 +33,7 @@ while True:
         Sexo: {sexo[i]}
         Idade: {idades[i]}
         ''')
+
 #3.3
      x = int(input('Informe o ID do cliente a ser exibido: '))
      x = id.index(x)
@@ -41,6 +43,7 @@ while True:
      Sexo: {sexo[x]}
      Idade: {idades[x]}
      ''')
+     
 #3.4
      x =  int(input('Informe o ID do cliente para conferir as informações: '))
      x = id.index(x)

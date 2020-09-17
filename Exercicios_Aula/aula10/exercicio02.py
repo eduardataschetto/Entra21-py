@@ -36,7 +36,6 @@ while True:
             Nome: {nomes[i]}
             Idade: {idades[i]}
             ''')
-        
     except ValueError:
         print('Oops! Valor inválido. Por favor, informe apenas números inteiros. ')
     else:
