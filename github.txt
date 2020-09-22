@@ -1,0 +1,13 @@
+git init - inicializa repositorio
+git clone - clona repositorio
+git add . / git add -A / git add * {adiciona todos os arquivos ao repositório}
+git add filename - adiciona um arquivo especifico ao repostorio
+git status - mostra a lista de alterações feitas no diretório local
+git commit -m "commit" - 
+git push - manda as alterações do rep local p nuvem
+git pull - pega as alterações do rep na nuvem
+git checkout -b name-branch - criar a branch e depois entrar nela
+git push origin namefeature - enviando pra branch
+
+
+
