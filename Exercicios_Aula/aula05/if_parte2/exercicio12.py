@@ -21,6 +21,7 @@ while True:
         4 - EXPOENENCIAÇÃO
         ########################
         Informe a opção desejada: ''')
+        
         if op == '1':
             print(f'{a} + {b} = {a+b}')
         elif op == '2':
