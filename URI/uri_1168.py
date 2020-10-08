@@ -6,7 +6,6 @@ def main():
         num = input()
         qtd = 0
         for i in num:
-
             if i == '0': qtd += 6
             elif i == '1': qtd += 2
             elif i == '2': qtd += 5
