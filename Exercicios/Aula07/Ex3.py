@@ -6,7 +6,7 @@
 
 def calcula_media(x, y, z):
     media = (x + y + z) / 3
-    print(f'A média entre {x}, {y} e {z} é {media}.')
+    print(f'A média aritmética entre {x}, {y} e {z} é {media}.')
 
 def main():
     x = float(input('Informe um número: '))

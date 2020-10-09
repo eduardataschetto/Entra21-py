@@ -5,20 +5,18 @@
 #--- Realize o calculo da raiz e armazene em uma segunda variável e retorne 
 #--- Imprima o resultado e uma mensagem usando f-string, fora da função
 
-def calcula_raiz(x):
+def calcula_raiz(rad, indice):
+     raiz = rad ** (1/indice)
 
-     raiz_quadrada = x ** (1/2)
-     raiz_cubica = x ** (1/3)
-     raiz_quarta = x ** (1/4)
-
-     return raiz_quadrada, raiz_cubica, raiz_quarta
+     return raiz
 
 
 def main():
-    x = int(input('Informe um número: '))
-
-    raiz_quadrada, raiz_cubica, raiz_quarta = calcula_raiz(x)
-    print(f'As raizes quadrada, cubica e quarta de {x} são, respectivamente, {raiz_quadrada}, {raiz_cubica} e {raiz_quarta} .')
+    num = int(input('Informe um número: '))
+    indice = int(input('Informe o indice: '))
+    
+    raiz = calcula_raiz(num, indice)
+    print(f'A raiz de {num}, sob o indice {indice} é {raiz:.2f}.')
 
 
 main()
