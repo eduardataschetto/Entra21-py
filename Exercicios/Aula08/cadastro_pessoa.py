@@ -15,10 +15,10 @@ def cadastrar_pessoa(nome:str, sobrenome:str, idade:int, lista_pessoas:list):
         return 'Ser humano menor de idade!'
 
     else:
-        usuario['id_usuario'] = 3
+        usuario['id_usuario'] = id(nome)
         usuario['nome'] = nome
         usuario['sobrenome'] = sobrenome
         usuario['idade'] = idade
         lista_pessoas.append(usuario)
 
-        return 3
+        return id(nome)

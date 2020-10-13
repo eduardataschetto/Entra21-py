@@ -14,8 +14,54 @@ from listar_enderecos import listar_enderecos,  listar_endereco_epecifico
 
 lista_pessoas = []
 
-cadastrar_pessoa('eduarda', 'taschetto', 19, lista_pessoas)
-cadastrar_endereco(3,'manoel', '242', 'casa', 'figueira', 'gaspar', 'sc', lista_pessoas)
-pessoa_especifica(3, lista_pessoas)
-lista_pessoas_cadastradas(lista_pessoas_cadastradas(lista_pessoas))
-print(lista_pessoas)
+def ler_dados ():
+    char = '*'
+    print(f'{char*10} CADASTRO DE DADOS {char*10}')
+    nome = input('Informe o nome: ')
+    sobrenome = input('Informe o sobrenome: ')
+    idade = int(input('Informe a idade: '))
+
+    return nome, sobrenome, idade
+
+
+def ler_endereco():
+    char = '*'
+    print(f'\n{char*10} ENDEREÇO {char*10}')
+    rua = input('Rua: ')
+    numero = input('Número: ')
+    complemento = input('Complemento: ')
+    bairro = input('Bairro: ')
+    cidade = input('Cidade: ')
+    estado = input('Estado: ')
+
+    return rua, numero, complemento, bairro, cidade, estado
+
+
+def main():
+
+    while True:
+
+        nome, sobrenome, idade = ler_dados()
+
+        situacao_cadastro = cadastrar_pessoa(nome, sobrenome, idade, lista_pessoas)
+
+        if type(situacao_cadastro)== int:
+            rua, numero, complemento, bairro, cidade, estado = ler_endereco()
+            cadastrar_endereco(situacao_cadastro, rua, numero, complemento, bairro, cidade, estado, lista_pessoas)
+            
+            x = input('\nPara continuar cadastrando digite Enter, para sair digite 0.\n')
+
+            if x == '0':
+                break
+        else:
+            print(situacao_cadastro + 'Tente novamente.')
+
+    char = '*'
+    print(f'{char*15} PESSOAS CADASTRADAS {char*15}')
+
+    for pessoa in lista_pessoas:
+        listar_pessoa_especifica(pessoa['id_usuario'], lista_pessoas)
+        listar_endereco_epecifico( pessoa['id_usuario'], lista_pessoas)
+
+
+main()

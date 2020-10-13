@@ -5,45 +5,19 @@
 #    a função deve exibir uma pessoa cadastrada na função do ex1 filtrando por id
 
 def listar_pessoas(lista_pessoas:list) -> None:
-    cabecalho_lista_clientes=('Lista de Pessoas Cadastradas')
-    separacao='-'
-
-    print(f'{cabecalho_lista_clientes:=^50}')
 
     for pessoa in lista_pessoas:
-        for chave, valor in pessoa.items():
-            print(f'''
-            Nome: {pessoa['nome']}
-            Sobrenome: {pessoa['sobrenome']}
-            Idade: {pessoa['idade']}
-            {separacao*20}
-            ''')
+        print(f'''
+        Nome: {pessoa['nome']}
+        Sobrenome: {pessoa['sobrenome']}
+        Idade: {pessoa['idade']}''')
 
 
 def listar_pessoa_especifica(id_usuario:int, lista_pessoas:list) -> None:
-    cabecalho_cliente_id=('Dados do Cliente Selecionado')
-
-    print(f'{cabecalho_cliente_id:=^50}')
 
     for pessoa in lista_pessoas:
-        for chave, valor in pessoa.items():
-            if chave == id_usuario:
-                return(f'''
-                Nome: {pessoa['nome']}
-                Sobrenome: {pessoa['nome']}
-                Idade: {pessoa['nome']}
-                ''')
-
-
-# def listar_pessoas()-> None:
-#     pass
-
-# def listar_pessoa_especifica(id_usuario) -> None:
-
-#     for dicionario in lista_pessoas:
-#         for chave, valor in dicionario:
-#             if chave == id_usuario:
-
-#                 return(valor)
-
-# print(listar_pessoa_especifica())
+         if pessoa['id_usuario'] == id_usuario:
+            print(f'''
+    Nome: {pessoa['nome']}
+    Sobrenome: {pessoa['nome']}
+    Idade: {pessoa['nome']}''')
