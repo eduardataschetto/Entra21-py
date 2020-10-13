@@ -14,7 +14,8 @@ def main():
         num1 = float(input('Informe um número: '))
         num2 = float(input('Informe outro número: '))
 
-        if num1 != 0 and num2 != 0:
+        if num2 != 0:
+            print('Não é possivel fazer a divisão por 0. Tente novamente!')
             break
 
     divide(num1, num2)
