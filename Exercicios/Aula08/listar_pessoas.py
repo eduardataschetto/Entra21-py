@@ -4,7 +4,7 @@
 #--- Escreva uma função para exibi uma pessoa específica:
 #    a função deve exibir uma pessoa cadastrada na função do ex1 filtrando por id
 
-def lista_pessoas_cadastradas(lista_pessoas:list) -> None:
+def listar_pessoas(lista_pessoas:list) -> None:
     cabecalho_lista_clientes=('Lista de Pessoas Cadastradas')
     separacao='-'
 
@@ -20,7 +20,7 @@ def lista_pessoas_cadastradas(lista_pessoas:list) -> None:
             ''')
 
 
-def pessoa_especifica(id_usuario:int, lista_pessoas:list) -> None:
+def listar_pessoa_especifica(id_usuario:int, lista_pessoas:list) -> None:
     cabecalho_cliente_id=('Dados do Cliente Selecionado')
 
     print(f'{cabecalho_cliente_id:=^50}')
