@@ -19,5 +19,5 @@ def listar_pessoa_especifica(id_usuario:int, lista_pessoas:list) -> None:
          if pessoa['id_usuario'] == id_usuario:
             print(f'''
     Nome: {pessoa['nome']}
-    Sobrenome: {pessoa['nome']}
-    Idade: {pessoa['nome']}''')
+    Sobrenome: {pessoa['sobrenome']}
+    Idade: {pessoa['idade']}''')
