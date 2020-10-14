@@ -26,4 +26,5 @@ def cadastrar_endereco(id_usuario:int, rua:str, numero:str, complemento:str, bai
         return 'Endereço cadastrado com sucesso.'
 
     else:
+        
         return 'Endereço inválido. Existem campos em branco. Tente novamente!'
