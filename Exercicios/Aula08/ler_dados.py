@@ -1,8 +1,8 @@
 
-def ler_dados ():
-    
+def ler_dados () -> str:
+
     char = '*'
-    print(f'{char*10} CADASTRO DE DADOS {char*10}')
+    print(f'{char*15} CADASTRO DE DADOS {char*15}')
 
     nome = input('Informe o nome: ')
     sobrenome = input('Informe o sobrenome: ')
@@ -11,10 +11,10 @@ def ler_dados ():
     return nome, sobrenome, idade
 
 
-def ler_endereco():
+def ler_endereco() -> str:
 
     char = '*'
-    print(f'\n{char*10} ENDEREÇO {char*10}')
+    print(f'\n{char*15} ENDEREÇO {char*15}')
 
     rua = input('Rua: ')
     numero = input('Número: ')

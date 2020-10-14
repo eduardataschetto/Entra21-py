@@ -16,15 +16,14 @@ from listar_enderecos import listar_enderecos,  listar_endereco_epecifico
 
 lista_pessoas = []
 
-
 def main():
 
     while True:
-        
+
         nome, sobrenome, idade = ler_dados()
         situacao_cadastro = cadastrar_pessoa(nome, sobrenome, idade, lista_pessoas)
 
-        if type(situacao_cadastro)== int:
+        if type(situacao_cadastro) == int:
             rua, numero, complemento, bairro, cidade, estado = ler_endereco()
             cadastrar_endereco(situacao_cadastro, rua, numero, complemento, bairro, cidade, estado, lista_pessoas)
             
