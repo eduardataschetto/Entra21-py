@@ -4,20 +4,28 @@
 #--- Escreva uma função para exibi uma pessoa específica:
 #    a função deve exibir uma pessoa cadastrada na função do ex1 filtrando por id
 
-def listar_pessoas(lista_pessoas:list) -> None:
+dados = ['ID','NOME','SOBRENOME','IDADE','RUA','Nº','COMPLEMENTO','BAIRRO','CIDADE','ESTADO']
 
-    for pessoa in lista_pessoas:
-        print(f'''
-        Nome: {pessoa['nome']}
-        Sobrenome: {pessoa['sobrenome']}
-        Idade: {pessoa['idade']}''')
+def listar_pessoas() -> None:
+
+    arquivo = open('lista_dados.txt','r')
+
+    for linha in arquivo:
+        elemento = linha.split(',')
+        for i in range(len(elemento)):
+            print(f'{dados[i]}: {elemento[i]}')
+
+    arquivo.close()
 
 
-def listar_pessoa_especifica(id_usuario:int, lista_pessoas:list) -> None:
+def listar_pessoa_especifica(id_usuario:str) -> None:
 
-    for pessoa in lista_pessoas:
-         if pessoa['id_usuario'] == id_usuario:
-            print(f'''
-    Nome: {pessoa['nome']}
-    Sobrenome: {pessoa['sobrenome']}
-    Idade: {pessoa['idade']}''')
+    arquivo = open('lista_dados.txt', 'r')
+
+    for linha in arquivo:
+        elemento = linha.split(',')
+        if id_usuario in elemento:
+            for i in range(len(elemento)):
+                print(f'{dados[i]}: {elemento[i]}')
+
+    arquivo.close()

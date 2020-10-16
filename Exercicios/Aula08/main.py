@@ -14,18 +14,16 @@ from cadastro_endereco import cadastrar_endereco
 from listar_pessoas import listar_pessoas, listar_pessoa_especifica
 from listar_enderecos import listar_enderecos,  listar_endereco_epecifico
 
-lista_pessoas = []
 
 def main():
 
     while True:
-
         nome, sobrenome, idade = ler_dados()
-        situacao_cadastro = cadastrar_pessoa(nome, sobrenome, idade, lista_pessoas)
+        situacao_cadastro = cadastrar_pessoa(nome, sobrenome, idade)
 
-        if type(situacao_cadastro) == int:
+        if situacao_cadastro != 'Ser humano menor de idade!':
             rua, numero, complemento, bairro, cidade, estado = ler_endereco()
-            cadastrar_endereco(situacao_cadastro, rua, numero, complemento, bairro, cidade, estado, lista_pessoas)
+            cadastrar_endereco(rua, numero, complemento, bairro, cidade, estado)
             
             x = input('\nPara continuar cadastrando digite Enter, para sair digite 0.\n')
             if x == '0':
@@ -33,12 +31,9 @@ def main():
         else:
             print(situacao_cadastro + 'Tente novamente.')
 
-    char = '*'
-    print(f'{char*15} PESSOAS CADASTRADAS {char*15}')
+    conteudo = 'PESSOAS CADASTRADAS'
+    print(f'{conteudo:*^50}')
 
-    for pessoa in lista_pessoas:
-        listar_pessoa_especifica(pessoa['id_usuario'], lista_pessoas)
-        listar_endereco_epecifico( pessoa['id_usuario'], lista_pessoas)
-
+    listar_pessoas()
 
 main()
