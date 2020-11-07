@@ -24,11 +24,12 @@ def limpa_tela() -> None:
             system('clear')
 
 
-def fim_jogo(tentativa_palavra:str) -> bool:
+def fim_jogo(tentativa_palavra:str, letras_usadas:list) -> bool:
     global palavra, chances
 
     if chances == 0:
         print("Você perdeu!")
+        tentar_novamente(letras_usadas)
         return True
     elif tentativa_palavra == palavra:
         print("Você ganhou com apenas %d!" % chances)
@@ -39,11 +40,23 @@ def valida_chute(chute:str, letras_usadas:list) -> bool:
     if not(chute.isdigit() or chute in letras_usadas):
         return True
 
+def tentar_novamente(letras_usadas:list) -> None:
+    global palavra, chances
+    option = input("Deseja tentar novamente? Você terá 5 novas tentativas.\n DIGITE 1 PARA CONTINUAR: ")
+
+    if option == '1':
+        chances = 5
+        jogada(letras_usadas)
 
 def jogar() -> None:
     global palavra, chances
     carregar_configuracoes()
     letras_usadas = []
+    jogada(letras_usadas)
+
+
+def jogada(letras_usadas:list) -> None:
+    global palavra, chances
 
     while True:
         tentativa_palavra = ""
@@ -56,7 +69,7 @@ def jogar() -> None:
             tentativa_palavra += x if x in letras_usadas else "_"
         print(tentativa_palavra + "\n\n")
 
-        if not fim_jogo(tentativa_palavra):
+        if not fim_jogo(tentativa_palavra, letras_usadas):
             chute = input("Digite uma letra:").upper()
 
             valid_chute = valida_chute(chute, letras_usadas)
