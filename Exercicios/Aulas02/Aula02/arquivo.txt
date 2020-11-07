@@ -1,0 +1,1 @@
+arroz:30.99,aspirador:350,cadeira:100,chocolate:150,forno:650,tapete:550
