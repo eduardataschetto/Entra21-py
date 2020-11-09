@@ -82,4 +82,3 @@ class Monitor:
 if __name__ == "__main__":
     monitor = Monitor(1080, 920, 'Dell')
     monitor.ligar()
-    
