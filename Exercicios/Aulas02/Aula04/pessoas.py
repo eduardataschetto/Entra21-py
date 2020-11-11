@@ -6,8 +6,4 @@ class Pessoa:
         self.cpf = cpf
 
     def __str__(self):
-        return f"{self.nome}-{self.idade}-{self.cpf}"
-
-p1 = Pessoa("Eduarda", 18, 00)
-p2 = Pessoa("Cleyton", 21, 155)
-p3 = Pessoa("Felix", 25, 455)
+        return f"{self.nome}_{self.idade}_{self.cpf}"
