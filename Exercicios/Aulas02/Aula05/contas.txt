@@ -1,0 +1,4 @@
+conta corrente = acesso facil ao dinheiro, cartao credito e debito, cheque, taxa mensal,
+poupança = acumula juros sobre fundo - taxa = semanal, mensal, anual
+salario = exclusivo funcionario, salario, 13, aposentaria - saque e extrato
+universitaria = tarifa e taxa gratuita, cartao credito só para universitários

@@ -10,7 +10,7 @@ def cadastrar_pessoa(cpf):
     salvar_arquivo(pessoa)
     return pessoa
 
-def verifica_cpf (cpf):
+def procurar_cpf (cpf):
     lista_cpfs = []
     #criando lista com os cpfs já cadastrados
     with open("pessoas.txt", "r") as file:
@@ -29,11 +29,34 @@ def salvar_arquivo(pessoa):
 
 def cadastrar_conta():
     cpf = input("CPF: ")
-    if verifica_cpf(cpf):
+    if procurar_cpf(cpf):
         pessoa = cadastrar_pessoa(cpf)
+        
     else:
         print(f"O CPF {cpf} já consta no sistema.")
 
+def acessar_conta():
 
-    pass
+    while True:
+        numero_conta = input("Informe o número da conta: ")
+        senha = input("Informe a senha: ")
+        letra = input("Informe a senha de letra: ")
+
+        option = input(f'''
+        1 - Visualizar Saldo
+        2 - Fazer um depósito #Eduarda
+        3 - Saque
+        4 - Transferência
+        5 - Sair''')
+
+        if option == 1:
+            visualizar_saldo(numero_conta)
+        elif option == 2:
+            fazer_deposito(numero_conta)
+        elif option == 3:
+            fazer_saque(numero_conta)
+        elif option == 4:
+            fazer_transferencia(numero_conta)
+        else:
+            break
 
