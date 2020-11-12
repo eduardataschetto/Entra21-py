@@ -15,12 +15,13 @@ class Banco():
 #         super().__init__()
 
 class Conta(Banco):
-    def __init__(self, banco:Banco, pessoa:Pessoa, numero:str, agencia:str, tipo_conta:int):
+    def __init__(self, banco:Banco, pessoa:Pessoa, numero:str, agencia:str, tipo_conta:int, saldo:float):
         super().__init__(banco)
         self.pessoa = pessoa
         self.numero = numero
         self.agencia = agencia
         self.tipo_conta = tipo_conta
+        self.saldo = saldo
     
 if __name__ == "__main__":
     while True:
