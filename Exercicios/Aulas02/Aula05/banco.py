@@ -3,6 +3,7 @@ from cadastro import cadastrar_conta, cadastrar_pessoa
 
 class Banco():
     def __init__(self, nome):
+        #lista bancos nome ai a pessoa só passa a opção
         self.nome = nome
 
 # class NuConta(Banco):
@@ -27,6 +28,7 @@ if __name__ == "__main__":
             """Digite a operação desejada
             1 - Cadastrar Conta
             2 - Visualizar Saldo
+            #retirar, transferencia
             3 - Fazer um depósito
             4 - Sair\n"""))
 

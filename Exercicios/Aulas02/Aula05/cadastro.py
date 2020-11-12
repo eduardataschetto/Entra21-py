@@ -1,21 +1,14 @@
 from pessoas import Pessoa
 
-def cadastrar_pessoa():
-    cpf = input("CPF: ")
-
-    if verifica_cpf(cpf):
-        nome = input("Nome: ")
-        data_nasc = input("Data de Nascimento: ")
-        telefone = input("Telefone: ")
-        email = input("Email:")
-        endereco = input("Endereço: ")
-        
-        pessoa = Pessoa(nome, cpf, email, endereco, data_nasc, telefone)
-        salvar_arquivo(pessoa)
-        cadastrar_conta(pessoa)
-        return pessoa
-    else:
-        print(f"O CPF {cpf} já consta no sistema.")
+def cadastrar_pessoa(cpf):
+    nome = input("Nome: ")
+    data_nasc = input("Data de Nascimento: ")
+    telefone = input("Telefone: ")
+    email = input("Email:")
+    endereco = input("Endereço: ")
+    pessoa = Pessoa(nome, cpf, email, endereco, data_nasc, telefone)
+    salvar_arquivo(pessoa)
+    return pessoa
 
 def verifica_cpf (cpf):
     lista_cpfs = []
@@ -35,5 +28,13 @@ def salvar_arquivo(pessoa):
         file.close()
 
 def cadastrar_conta(pessoa):
+    cpf = input("CPF: ")
+    if verifica_cpf(cpf):
+        pessoa = cadastrar_pessoa(cpf)
+        
+    else:
+    print(f"O CPF {cpf} já consta no sistema.")
+
+
     pass
 
