@@ -1,5 +1,6 @@
 from pessoas import Pessoa
-from cadastro import cadastrar_conta, cadastrar_pessoa
+from cadastro import cadastrar_conta, cadastrar_pessoa, acessar_conta
+
 
 class Banco():
     def __init__(self, nome):
@@ -31,17 +32,14 @@ if __name__ == "__main__":
             """Digite a operação desejada
             1 - Cadastrar Conta
             2 - Acessar Conta #senha, letra paara entra return numero, agencia                                                                                                                           
-            # 2 - Visualizar Saldo
-            # 3 - Fazer um depósito #Eduarda
-            # 4 - Saque
-            # 5 - Transferência
             3 - Sair\n"""))
 
         if valor == 1:
             cadastrar_conta()
         elif valor == 2:
             acessar_conta()
-            
-        if(valor == 5):
+        elif valor == 3:
             print("Agradecemos a sua visita!")
             break
+        else:
+            print("Opção inválida!\n Tente novamente!")
