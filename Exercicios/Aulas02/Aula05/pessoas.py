@@ -1,7 +1,6 @@
 class Pessoa:
 
-    def __init__(self, id, nome, cpf, email, endereco, data_nasc, telefone):
-        self.id = id
+    def __init__(self, nome, cpf, email, endereco, data_nasc, telefone):
         self.nome = nome
         self.data_nasc = data_nasc
         self.cpf = cpf

@@ -1,20 +1,38 @@
 from pessoas import Pessoa
 
 def cadastrar_pessoa():
-    nome = input("Nome: ")
-    data_nasc = input("Data: ")
-    cpf = input("Cpf")
-    telefone = input("Tel")
-    email = input("Email:")
-    endereco = input("Endereco: ")
-    p1 = Pessoa(id(nome), nome, cpf, email, endereco, data_nasc, telefone)
-    salvar_arquivo(p1)
-    return p1
+    cpf = input("CPF: ")
+
+    if verifica_cpf(cpf):
+        nome = input("Nome: ")
+        data_nasc = input("Data de Nascimento: ")
+        telefone = input("Telefone: ")
+        email = input("Email:")
+        endereco = input("Endereço: ")
+        
+        pessoa = Pessoa(nome, cpf, email, endereco, data_nasc, telefone)
+        salvar_arquivo(pessoa)
+        cadastrar_conta(pessoa)
+        return pessoa
+    else:
+        print(f"O CPF {cpf} já consta no sistema.")
+
+def verifica_cpf (cpf):
+    lista_cpfs = []
+    #criando lista com os cpfs já cadastrados
+    with open("pessoas.txt", "r") as file:
+        for linha in file.readlines():
+            lista_cpfs = linha.split(";")[0]
+
+    #verificando se o cpf já costa nos registros
+    if cpf in lista_cpfs:
+        return False
+    return True
 
 def salvar_arquivo(pessoa):
-    file = open("pessoas.txt", "a")
-    file.write(f"{pessoa.id};{pessoa.nome};{pessoa.data_nasc};{pessoa.cpf};{pessoa.telefone};{pessoa.email};{pessoa.endereco}\n")
-    file.close()
+    with open("pessoas.txt", "a") as file:
+        file.write(f"{pessoa.cpf};{pessoa.nome};{pessoa.data_nasc};{pessoa.telefone};{pessoa.email};{pessoa.endereco}\n")
+        file.close()
 
 def cadastrar_conta(pessoa):
     pass
