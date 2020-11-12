@@ -34,8 +34,7 @@ if __name__ == "__main__":
             4 - Sair\n"""))
 
         if valor == 1:
-            pessoa = cadastrar_pessoa()
-            cadastrar_conta(pessoa)
+            cadastrar_conta()
             
         if(valor == 5):
             print("Agradecemos a sua visita!")

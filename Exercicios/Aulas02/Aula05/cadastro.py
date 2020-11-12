@@ -27,13 +27,12 @@ def salvar_arquivo(pessoa):
         file.write(f"{pessoa.cpf};{pessoa.nome};{pessoa.data_nasc};{pessoa.telefone};{pessoa.email};{pessoa.endereco}\n")
         file.close()
 
-def cadastrar_conta(pessoa):
+def cadastrar_conta():
     cpf = input("CPF: ")
     if verifica_cpf(cpf):
         pessoa = cadastrar_pessoa(cpf)
-        
     else:
-    print(f"O CPF {cpf} já consta no sistema.")
+        print(f"O CPF {cpf} já consta no sistema.")
 
 
     pass
