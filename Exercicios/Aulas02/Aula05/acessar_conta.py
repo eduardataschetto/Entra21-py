@@ -1,17 +1,17 @@
 from operacoes import visualizar_saldo, fazer_deposito, saque
-from arquivo import valida_login
+from arquivo import filtrar_conta
 from getpass import getpass
 
 def acessar_conta():
     while True:
         numero_conta = input("Informe o número da conta: ")
-        senha = getpass(prompt = 'Senha:')
-        letra = input("Informe a senha de letra: ")
-        break
-        # if valida_login(numero_conta, senha, letra):
-        #     break
-        # else:
-        #     print("Dados incorretos. Tente novamente.")
+        senha = getpass(prompt = 'Senha:' )
+        letra =  getpass(prompt = 'Senha de letra: ')
+        if valida_login(numero_conta, senha, letra):
+            print("Dados corretos")
+            break
+        else:
+            print("Dados incorretos. Tente novamente.")
 
     while True:
         option = int(input(f'''
@@ -38,5 +38,14 @@ def acessar_conta():
             break
 
 
+def valida_login(numero_conta, senha, letra):
+    contas, index = filtrar_conta(numero_conta)
+    if senha == contas[index][4] and letra == contas[index][8]:
+        print(contas[index])
+        return True
+    return False
+    print(contas[index])
 
-# acessar_conta()
+
+
+acessar_conta()

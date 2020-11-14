@@ -1,3 +1,3 @@
-NomeBanco;cpf;agencia;numcontya;senha;20
-NuBank;044.215.120-95;877;55108;senhade8;1000
-NuBank;044.215.120-96;473;33692;senhade8;20
+{banco};{cpf};{agencia};{numero_conta};{senha};20;{pergunta_secreta};{senha_pergunta};{letras_secretas}
+NuBank;044.215.120-95;877;55108;senhade8;1000;Data de nacimento:;01/11/2002;ABC
+NuBank;044.215.120-96;473;33692;senhade8;20;Nome mãe;Maressa;DUDA
