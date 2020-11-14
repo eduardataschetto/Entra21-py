@@ -1,4 +1,5 @@
 {banco};{cpf};{agencia};{numero_conta};{senha};20;{pergunta_secreta};{senha_pergunta};{letras_secretas}
-NuBank;044.216.122-98;918;87423;dudinha1;125;Nome da minha vï¿½;Nara;DUDA
+NuBank;044.216.122-98;918;87423;dudinha1;1225;Nome da minha vï¿½;Nara;DUDA
 Itau;020-123-456-99;625;90554;pandora1;2018;Nome da gata;Pandora;PPP
-Santander;030-987-456-88;899;9870;corinthi;4035;Nome dos cachorro;Mel e Megan;GGG
+Santander;030-987-456-88;899;9870;corinthi;4040;Nome dos cachorro;Mel e Megan;GGG
+Bradesco;012-654-77;463;36248;12345678;3000;Time;Grêmio;CCC

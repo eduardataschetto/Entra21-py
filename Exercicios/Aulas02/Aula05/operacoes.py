@@ -40,42 +40,45 @@ def fazer_transferencia(numero_conta):
     while True:
         numconta_transferencia = input("Informe o número da conta para fazer transferência: ")
         lista, index = filtrar_conta(numconta_transferencia)
-        pessoa = filtrar_pessoa(lista[index][1])
-        valor = 0
+        if lista:
+            pessoa = filtrar_pessoa(lista[index][1])
+            valor = 0
 
-        valida_transferencia = 0
-        while True:
-            try:
-                valida_transferencia = int(input(f"TRANSFERIR PARA:  {pessoa[1]}\nNÚMERO DA CONTA: {numconta_transferencia}\n1 - SIM\t2 - NÃO\nInforme: "))
-                if valida_transferencia in [1, 2]:
-                    break
-            except ValueError:
-                print("Opção Inválida!")
-
-        if valida_transferencia == 1:
+            valida_transferencia = 0
             while True:
-                saldo = visualizar_saldo(numero_conta)
-                valor = int(input("Informe o valor que você deseja transferir: "))
-                if valor > saldo:
-                    print("Ops! Você possui um saldo inferior ao valor que deseja transferir! Insira outro valor: ")
-                else:
-                    break
-        else:
-            continue
-            
-        valida_valor = 0
-        while True:
-            try:
-                valida_valor = int(input(f"TRANSFERIR R$ {valor:.2f} PARA:  {pessoa[1]}\nNÚMERO DA CONTA: {numconta_transferencia}\n1 - SIM\t2 - CANCELAR\nInforme: "))
-                if valida_valor in [1, 2]:
-                    break
-            except ValueError:
-                print("Opção Inválida!")
+                try:
+                    valida_transferencia = int(input(f"TRANSFERIR PARA:  {pessoa[1]}\nNÚMERO DA CONTA: {numconta_transferencia}\n1 - SIM\t2 - NÃO\nInforme: "))
+                    if valida_transferencia in [1, 2]:
+                        break
+                except ValueError:
+                    print("Opção Inválida!")
 
-        if valida_valor == 1:
-            lista[index][5] = int(lista[index][5]) + valor
-            update_contas(lista)
-            print(f"Você transferiu R$ {valor:.2f} para {pessoa[1]}")
-            break
+            if valida_transferencia == 1:
+                while True:
+                    saldo = visualizar_saldo(numero_conta)
+                    valor = int(input("Informe o valor que você deseja transferir: "))
+                    if valor > saldo:
+                        print("Ops! Você possui um saldo inferior ao valor que deseja transferir! Insira outro valor: ")
+                    else:
+                        break
+            else:
+                continue
+                
+            valida_valor = 0
+            while True:
+                try:
+                    valida_valor = int(input(f"TRANSFERIR R$ {valor:.2f} PARA:  {pessoa[1]}\nNÚMERO DA CONTA: {numconta_transferencia}\n1 - SIM\t2 - CANCELAR\nInforme: "))
+                    if valida_valor in [1, 2]:
+                        break
+                except ValueError:
+                    print("Opção Inválida!")
+
+            if valida_valor == 1:
+                lista[index][5] = int(lista[index][5]) + valor
+                update_contas(lista)
+                print(f"Você transferiu R$ {valor:.2f} para {pessoa[1]}")
+                break
+            else:
+                break
         else:
-            break
+            print("Número de conta inválido! ")

@@ -4,6 +4,7 @@ from getpass import getpass
 
 def acessar_conta():
     while True:
+        limpa_tela()
         numero_conta = input("Informe o número da conta: ")
         senha = getpass(prompt = 'Senha:' )
         letra =  getpass(prompt = 'Senha de letra: ')
@@ -43,7 +44,7 @@ def acessar_conta():
 
 def valida_login(numero_conta, senha, letra):
     contas, index = filtrar_conta(numero_conta)
-    if senha == contas[index][4] and letra.upper() == contas[index][8]:
-        return True
+    if contas:
+        if senha == contas[index][4] and letra.upper() == contas[index][8]:
+            return True
     return False
-    print(contas[index])

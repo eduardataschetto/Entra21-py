@@ -16,6 +16,7 @@ class Conta():
     
 if __name__ == "__main__":
     while True:
+        limpa_tela()
         valor = int(input(
             """Digite a operação desejada
             1 - Cadastrar Conta

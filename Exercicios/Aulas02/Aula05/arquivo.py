@@ -12,7 +12,7 @@ def filtrar_conta(numero_conta:str) -> list:
         for conta in contas:
             if conta[3] == numero_conta:
                 return contas, contas.index(conta)
-    f.close()
+    return False, False
 
 
 def update_contas(contas):
