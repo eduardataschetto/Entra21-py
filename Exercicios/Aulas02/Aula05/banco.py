@@ -1,23 +1,9 @@
-from pessoas import Pessoa
-from cadastro import cadastrar_conta, cadastrar_pessoa, acessar_conta
+from cadastro_conta import cadastrar_conta
+from acessar_conta import acessar_conta
 
-
-class Banco():
-    def __init__(self, nome):
-        #lista bancos nome ai a pessoa só passa a opção
-        self.nome = nome
-
-class NuConta(Banco):
-    def __init__(self, ):
-        super().__init__()
-
-class Viacredi(Banco):
-    def __init__(self):
-        super().__init__()
-
-class Conta(Banco):
-    def __init__(self, banco:Banco, pessoa:Pessoa, numero:str, agencia:str, tipo_conta:int, saldo:float, senha:str):
-        super().__init__(banco)
+class Conta():
+    def __init__(self, banco, pessoa:Pessoa, numero:str, agencia:str, tipo_conta:int, saldo:float, senha:str):
+        self.banco = banco
         self.pessoa = pessoa
         self.numero = numero
         self.agencia = agencia
@@ -31,7 +17,7 @@ if __name__ == "__main__":
         valor = int(input(
             """Digite a operação desejada
             1 - Cadastrar Conta
-            2 - Acessar Conta #senha, letra paara entra return numero, agencia                                                                                                                           
+            2 - Acessar Conta
             3 - Sair\n"""))
 
         if valor == 1:

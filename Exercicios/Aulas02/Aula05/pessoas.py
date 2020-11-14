@@ -11,3 +11,5 @@ class Pessoa:
 
     def __str__(self):
         return f"{self.nome}_{self.data_nasc}_{self.cpf}_{self.email}_{self.telefone}_{self.endereco}"
+
+
