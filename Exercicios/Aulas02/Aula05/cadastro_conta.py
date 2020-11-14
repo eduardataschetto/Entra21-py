@@ -1,4 +1,4 @@
-from arquivo import limpa_tela, salvar_arquivo
+from arquivo import limpa_tela, salvar_arquivo, filtrar_conta
 from time import sleep
 from random import randint
 from pessoas import Pessoa
@@ -8,18 +8,17 @@ def cadastrar_pessoa():
     limpa_tela()
     print("########## CADASTRO DE PESSOA ##########\n")
     cpf = input("Informe seu CPF: ")
-    if not procurar_cpf(cpf):
+    if not dado_in_lista(1, cpf):
         nome = input("NOME: ")
         data_nasc = input("DATA DE NASCIMENTO: ")
         telefone = input("TELEFONE: ")
         email = input("E-MAIL:")
         endereco = input("ENDEREÇO: ")
+        print('\n')
         pessoa = Pessoa(nome, cpf, email, endereco, data_nasc, telefone)
         salvar_arquivo(pessoa)
         return cpf
-    else:
-        print(f"O CPF {cpf} já consta em nossos registros.")
-        return False
+    return False
 
 
 def cadastrar_conta():
@@ -32,6 +31,7 @@ def cadastrar_conta():
         print("Agora vamos gerenciar suas opções de segurança. ")
         sleep(1.5), limpa_tela()
         senha, pergunta_secreta, senha_pergunta, letras_secretas = cadastro_senhas()
+        print(f"Obrigada pela preferência! Você ganhou um bônus no valor de R$ 20,00 por ter escolhido o {banco}!")
         
         while True:
             agencia = gera_dado_conta(1000)
@@ -40,12 +40,13 @@ def cadastrar_conta():
 
         while True:
             numero_conta = gera_dado_conta(100000)
-            if not dado_in_lista(2, agencia):
+            if not dado_in_lista(3, numero_conta):
                 break
-
         with open("conta.txt", "a") as f:
-            f.write(f"{banco};{cpf};{agencia};{numero_conta};{senha};{pergunta_secreta};{senha_pergunta};{letras_secretas}\n")
+            f.write(f"{banco};{cpf};{agencia};{numero_conta};{senha};20;{pergunta_secreta};{senha_pergunta};{letras_secretas}\n")
             f.close()
+    else:
+        print(f"O CPF já consta em nossos registros.")
 
 
 def banco_select():
@@ -111,19 +112,3 @@ def dado_in_lista(index, dado):
         if dado in lista_dado:
             return True
         return False
-
-    
-def procurar_cpf (cpf):
-    lista_cpfs = []
-    #criando lista com os cpfs já cadastrados
-    with open("pessoas.txt", "r") as file:
-        for linha in file:
-            linha.strip()
-            lista_cpfs.append(linha.split(";")[0])
-
-    #verificando se o cpf já costa nos registros
-    if cpf in lista_cpfs:
-        return True
-    return False
-
-cadastrar_conta()

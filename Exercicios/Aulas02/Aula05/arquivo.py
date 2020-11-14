@@ -30,11 +30,11 @@ def salvar_arquivo(pessoa):
         file.close()
 
 
-# def valida_login(numero_conta, senha, letra):
-#     contas, index = filtrar_conta(numero_conta)
-#     if senha == contas[index][5] and letra == contas[index][5]:
-#         pass
-#     print(contas[index])
+def valida_login(numero_conta, senha, letra):
+    contas, index = filtrar_conta(numero_conta)
+    if senha == contas[index][5] and letra == contas[index][5]:
+        pass
+    print(contas[index])
 
 
 def limpa_tela() -> None:

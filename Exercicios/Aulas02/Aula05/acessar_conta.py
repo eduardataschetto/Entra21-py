@@ -7,6 +7,7 @@ def acessar_conta():
         numero_conta = input("Informe o número da conta: ")
         senha = getpass(prompt = 'Senha:')
         letra = input("Informe a senha de letra: ")
+        break
         # if valida_login(numero_conta, senha, letra):
         #     break
         # else:

@@ -1,1 +1,5 @@
 044215120-95;ed;01/11/2002;47;@;rua
+044.215.120-95;ed;df;dfgdfg;dfhfd;fdh
+044.215.120-96;Eduarda;01/11/2002;47991524115;eduarda@gmail.com;RUa
+044.215.120-95;Eduarda Taschetto;01/11/2002;47 91524115;eduarda@gmail.com;Figueira
+044.215.120-96;Duda;01/11/2002;47 992828763;duda@gmail.com;Gaspar

@@ -1,5 +1,6 @@
 from cadastro_conta import cadastrar_conta
 from acessar_conta import acessar_conta
+from pessoas import Pessoa
 
 class Conta():
     def __init__(self, banco, pessoa:Pessoa, numero:str, agencia:str, tipo_conta:int, saldo:float, senha:str):

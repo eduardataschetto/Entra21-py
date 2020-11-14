@@ -1,3 +1,3 @@
-NuBank;044.215.120-95;591;61711;12345678;pergunta;resposta;abc
-NuBank;044.215.120-95;482;85560;12345678;pergunta;resposta;avc
-NuBank;044215120-95;964;68964;12345678;data nasc;01/11/2002;ab
+NomeBanco;cpf;agencia;numcontya;senha;20
+NuBank;044.215.120-95;877;55108;senhade8;1000
+NuBank;044.215.120-96;473;33692;senhade8;20
