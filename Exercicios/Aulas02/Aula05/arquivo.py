@@ -1,7 +1,5 @@
 from os import system, name
 
-__pessoas = open("pessoas.txt")
-
 def filtrar_conta(numero_conta:str) -> list:
     contas = []
 
@@ -37,3 +35,12 @@ def limpa_tela() -> None:
     # for mac and linux(here, os.name is 'posix') 
         else: 
             system('clear')
+
+
+def filtrar_pessoa(cpf):
+    with open("pessoas.txt", "r") as f:
+        for linha in f:
+            linha = linha.strip().split(";")
+            if linha[0] == cpf:
+                pessoa = linha
+                return pessoa

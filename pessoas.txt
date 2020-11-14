@@ -3,3 +3,6 @@
 044.215.120-96;Eduarda;01/11/2002;47991524115;eduarda@gmail.com;RUa
 044.215.120-95;Eduarda Taschetto;01/11/2002;47 91524115;eduarda@gmail.com;Figueira
 044.215.120-96;Duda;01/11/2002;47 992828763;duda@gmail.com;Gaspar
+044.216.122-98;Eduarda Taschetto;01/11/2002;47991524115;eduardat@gmail.com;GAspar, SC
+020-123-456-99;Karla Dias;03/01/2003;479989652;karla@gmail.com;Bela Vista
+030-987-456-88;Gabrieli Ramos;06/06/2002;47895623;gabrilei@gmail.com;Gaspar

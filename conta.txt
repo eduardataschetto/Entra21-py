@@ -1,3 +1,4 @@
 {banco};{cpf};{agencia};{numero_conta};{senha};20;{pergunta_secreta};{senha_pergunta};{letras_secretas}
-NuBank;044.215.120-95;877;55108;senhade8;1000;Data de nacimento:;01/11/2002;ABC
-NuBank;044.215.120-96;473;33692;senhade8;20;Nome mãe;Maressa;DUDA
+NuBank;044.216.122-98;918;87423;dudinha1;125;Nome da minha v�;Nara;DUDA
+Itau;020-123-456-99;625;90554;pandora1;2018;Nome da gata;Pandora;PPP
+Santander;030-987-456-88;899;9870;corinthi;4035;Nome dos cachorro;Mel e Megan;GGG

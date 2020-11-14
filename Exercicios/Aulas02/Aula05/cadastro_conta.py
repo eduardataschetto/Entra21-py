@@ -32,6 +32,8 @@ def cadastrar_conta():
         sleep(1.5), limpa_tela()
         senha, pergunta_secreta, senha_pergunta, letras_secretas = cadastro_senhas()
         print(f"Obrigada pela preferência! Você ganhou um bônus no valor de R$ 20,00 por ter escolhido o {banco}!")
+        sleep(2)
+        limpa_tela()
         
         while True:
             agencia = gera_dado_conta(1000)
@@ -50,7 +52,7 @@ def cadastrar_conta():
 
 
 def banco_select():
-    bancos = ['NuBank', 'ViaCredi', 'Itaú', 'Santander', 'Bradesco']
+    bancos = ['NuBank', 'ViaCredi', 'Itau', 'Santander', 'Bradesco']
     print("Para começar, informe o banco no qual você deseja abrir a conta:")
     while True:
         for i in range(len(bancos)):

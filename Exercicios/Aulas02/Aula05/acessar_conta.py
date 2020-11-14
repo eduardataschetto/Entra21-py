@@ -1,5 +1,5 @@
-from operacoes import visualizar_saldo, fazer_deposito, saque
-from arquivo import filtrar_conta
+from operacoes import visualizar_saldo, fazer_deposito, saque, fazer_transferencia
+from arquivo import filtrar_conta, limpa_tela
 from getpass import getpass
 
 def acessar_conta():
@@ -8,7 +8,7 @@ def acessar_conta():
         senha = getpass(prompt = 'Senha:' )
         letra =  getpass(prompt = 'Senha de letra: ')
         if valida_login(numero_conta, senha, letra):
-            print("Dados corretos")
+            limpa_tela()
             break
         else:
             print("Dados incorretos. Tente novamente.")
@@ -23,14 +23,17 @@ def acessar_conta():
         6 - Sair\n\nR: '''))
 
         if option == 1:
+            limpa_tela()
             visualizar_saldo(numero_conta)
         elif option == 2:
+            limpa_tela()
             fazer_deposito(numero_conta)
         elif option == 3:
+            limpa_tela()
             saque(numero_conta)
         elif option == 4:
-            pass
-            #fazer_transferencia(numero_conta)
+            limpa_tela()
+            fazer_transferencia(numero_conta)
         # elif option == 5:
         #     contar()
         #     visualizar_dados(numero_conta, quant)
@@ -40,12 +43,7 @@ def acessar_conta():
 
 def valida_login(numero_conta, senha, letra):
     contas, index = filtrar_conta(numero_conta)
-    if senha == contas[index][4] and letra == contas[index][8]:
-        print(contas[index])
+    if senha == contas[index][4] and letra.upper() == contas[index][8]:
         return True
     return False
     print(contas[index])
-
-
-
-acessar_conta()
