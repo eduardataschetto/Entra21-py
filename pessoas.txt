@@ -7,3 +7,5 @@
 020-123-456-99;Karla Dias;03/01/2003;479989652;karla@gmail.com;Bela Vista
 030-987-456-88;Gabrieli Ramos;06/06/2002;47895623;gabrilei@gmail.com;Gaspar
 012-654-77;Cleiton da Silva;05/07/2001;4789562314;cleitin@gmail.com;aguas negras
+044.216.121.95;Eduarda Taschetto;01/11/2002;47991524115;eduarda@gmail.com;Gaspar
+044.123.897-78;Dudinha;01/11/2009;47895632;dudinha@gmail.com;Gaspar

@@ -1,4 +1,4 @@
-from arquivo import filtrar_conta, update_contas, filtrar_pessoa
+from arquivo import filtrar_conta, update_contas, filtrar_pessoa, limpa_tela
 
 def fazer_deposito(numero_conta):
     contas, index = filtrar_conta(numero_conta)
@@ -49,6 +49,7 @@ def fazer_transferencia(numero_conta):
                 try:
                     valida_transferencia = int(input(f"TRANSFERIR PARA:  {pessoa[1]}\nNÚMERO DA CONTA: {numconta_transferencia}\n1 - SIM\t2 - NÃO\nInforme: "))
                     if valida_transferencia in [1, 2]:
+                        limpa_tela()
                         break
                 except ValueError:
                     print("Opção Inválida!")
@@ -69,6 +70,7 @@ def fazer_transferencia(numero_conta):
                 try:
                     valida_valor = int(input(f"TRANSFERIR R$ {valor:.2f} PARA:  {pessoa[1]}\nNÚMERO DA CONTA: {numconta_transferencia}\n1 - SIM\t2 - CANCELAR\nInforme: "))
                     if valida_valor in [1, 2]:
+                        limpa_tela()
                         break
                 except ValueError:
                     print("Opção Inválida!")
@@ -77,6 +79,7 @@ def fazer_transferencia(numero_conta):
                 lista[index][5] = int(lista[index][5]) + valor
                 update_contas(lista)
                 print(f"Você transferiu R$ {valor:.2f} para {pessoa[1]}")
+                limpa_tela()
                 break
             else:
                 break

@@ -102,7 +102,7 @@ def gera_dado_conta(max):
     dado = randint(0, max)
     return dado
 
-#função que verifica se um determinado dado já foi cadastrado no arquivo
+
 def dado_in_lista(index, dado):
     lista_dado = []
     with open("conta.txt", "r") as f:
