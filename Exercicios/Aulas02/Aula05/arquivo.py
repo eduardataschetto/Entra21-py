@@ -20,7 +20,7 @@ def filtrar_conta(numero_conta:str) -> list:
 def update_contas(contas):
     with open("conta.txt", "w") as f:
         for conta in contas:
-            f.write(f"{conta[0]};{conta[1]};{conta[2]};{conta[3]};{conta[4]};{conta[5]}\n")
+            f.write(f"{conta[0]};{conta[1]};{conta[2]};{conta[3]};{conta[4]};{conta[5]};{conta[6]};{conta[7]};{conta[8]}\n")
     f.close()
 
 
