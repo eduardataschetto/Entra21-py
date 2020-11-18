@@ -1,12 +1,13 @@
 import sqlite3
 
-conn = sqlite3.connect('carros.db')
+conn = sqlite3.connect('veiculos.db')
 
 cursor = conn.cursor()
 
 cursor.execute("""
-    CREATE TABLE carro (
+    CREATE TABLE veiculo (
         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        tipo TEXT,
         marca TEXT NOT NULL,
         modelo TEXT NOT NULL,
         placa TEXT NOT NULL,
@@ -16,19 +17,5 @@ cursor.execute("""
 """)
 
 print("Tabela criada.")
-
-cursor.execute("""
-    INSERT INTO carro (marca, modelo, placa, potencia, cor)
-    VALUES ('FORD', 'KA', 'CARR-0001', '3', 'branco')
-""")
-
-cursor.execute("""
-    SELECT * FROM carro;
-""")
-
-for linha in cursor.fetchall():
-    print(linha)
-
-
 
 conn.close()
