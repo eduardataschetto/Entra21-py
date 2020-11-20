@@ -7,6 +7,7 @@ cursor.execute("""
     SELECT * FROM pessoas
 """)
 
+
 print(cursor.fetchall())
 
 conn.close()

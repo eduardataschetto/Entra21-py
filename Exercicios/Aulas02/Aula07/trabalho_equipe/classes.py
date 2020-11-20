@@ -59,6 +59,3 @@ class Pessoa():
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", (self.nome, self.data_nasc, self.cpf, self.endereco, self.salario, self.profissao, self.email, self.telefone, self.nome_resp, self.sexo, self.naturalidade, self.nacionalidade))
         conn.commit()
         conn.close()
-
-
-
