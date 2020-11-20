@@ -1,8 +1,8 @@
 import sqlite3
- 
+
 conn = sqlite3.connect('cadastro_de_veiculos_concessionaria_do_vale.db')
 cursor = conn.cursor()
- 
+
 cursor.execute("""
                CREATE TABLE cadastro_de_veiculos (
                     id_veiculo INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
@@ -18,7 +18,7 @@ cursor.execute("""
                     placa TEXT NOT NULL,
                     criado_em DATE NOT NULL
                ); 
-        """)         
+        """)
 
 cursor.execute("""
                CREATE TABLE cadastro_de_pessoas (
@@ -36,7 +36,7 @@ cursor.execute("""
                     naturalidade TEXT NOT NULL,
                     nacionalidade TEXT NOT NULL
                );
-        """) 
+        """)
 
 cursor.execute("""
                CREATE TABLE pessoa_veiculo (
@@ -46,5 +46,5 @@ cursor.execute("""
                    FOREIGN KEY (id_veiculo_prop) REFERENCES cadastro_de_veiculos(id_veiculo)
                );
         """)
- 
+
 conn.close()
